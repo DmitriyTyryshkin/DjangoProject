@@ -11,8 +11,8 @@ from django.conf import settings
 def upload_file(request):
     data = File.objects.all()
     if data:
-        os.remove(settings.PATH_FOR_CLEAN_FILE + data[0].file.url)
-        os.remove('out/report.png')
+        os.remove(settings.PATH_IN + data[0].file.url)
+        os.remove(settings.PATH_OUT + 'report.png')
         data.delete()
 
     if request.method == 'POST':

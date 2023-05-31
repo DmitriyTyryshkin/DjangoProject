@@ -1,0 +1,24 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="text/css" href="home.css" rel="stylesheet" />
+    <title>Demo Gallery</title>
+  </head>
+  <body>
+
+
+    <ul>
+        {% for x in data %}
+        <li class="loc-caption">
+            <div class="caption">
+                <p>{{ x.title }}</p>
+            </div>
+        <img id="loc1" src="{{ x.photo.url }}" alt="Lights" />
+        </li>
+        {% endfor %}
+    </ul>
+  </body>
+</html>

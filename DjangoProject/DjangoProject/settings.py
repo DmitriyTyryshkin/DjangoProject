@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/4.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/
 """
-
+import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -40,6 +40,8 @@ INSTALLED_APPS = [
     'rest_framework',
     'Predictions',
 ]
+
+PATH_FOR_CLEAN_FILE = os.path.join(BASE_DIR)
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -118,6 +120,19 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = 'static/'
+#
+
+
+MEDIA_ROOT = BASE_DIR / 'files'
+
+MEDIA_URL = '/files/'
+
+
+PATH_IN = 'C:/Users/deimo/projects/diploma/DjangoProject/DjangoProject/files/in'
+PATH_OUT = 'C:/Users/deimo/projects/diploma/DjangoProject/DjangoProject/files/out'
+
+
+# PATH_FOR_CLEAN_FILE = 'C:/Users/deimo/projects/diploma/DjangoProject/DjangoProject'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
