@@ -5,20 +5,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link type="text/css" href="upload.css" rel="stylesheet" />
-    <title>Image Upload</title>
+    <link type="text/css" rel="stylesheet" /> <!--href="upload.css"-->
+    <title>Upload</title>
 </head>
 <body>
     <div class="form">
-        <div class="title">Привет</div>
-        <div class="subtitle">Здесь можно распознать лица на фото</div>
+        <div class="subtitle">Загрузите набор данных</div>
         <form method="POST" enctype="multipart/form-data">
             <div class="input-container ic1">
                 {% csrf_token %}
                 {{ form.as_p }}
             </div>
 
-            <button type="submit">Распознать лица на фото</button>
+            <button type="submit">Передать набор данных</button>
         </form>
     </div>
 </body>
